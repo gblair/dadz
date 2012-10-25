@@ -1,0 +1,203 @@
+@import 'mixins';
+@import 'generalvars';
+@import 'reset';
+@import 'colorbox';
+@import 'jplayer';
+
+$sColor: #444;
+$offWhite: #f3f3f3;
+$lime: #99ff00;
+$orange: orange;
+$lightGray: #ddd;
+$mediumGray: #999;
+$darkGray: #333;
+$gradientColorTop: #444;
+$gradientColorBottom: #333;
+$width: 780px;
+$brown: #443311;
+$green: #447700;
+$mainTextColor: #000;
+
+.font-contrail {font-family: 'Contrail One', cursive;}
+.font-monoton {font-family: 'Monoton', cursive;}
+.font-righteous {font-family: 'Righteous', cursive;}
+.font-megrim {font-family: 'Megrim', cursive;}
+.font-geo {font-family: 'Geo', sans-serif;}
+
+body {
+	font-size: 16px;
+	font-family: sans-serif;
+//	background-color: #787878;
+	color: $mainTextColor;
+	margin: 0; 
+	padding: 0;
+//	@include _gradient($gradientColorBottom,$gradientColorTop);
+}
+
+a {
+	color: $orange;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.bg {
+	@include _opacity(.1);
+	position: fixed; 
+	width: 2500px;
+	top: 0;
+	left: 0;
+}
+
+.bgSimple {
+	@include _opacity(.05);
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 700px;
+	width: $width;
+	line-height: 1;
+	span {
+		display: block;
+		float: left;
+		position: absolute;
+		left: 10px;
+		top: 0;
+		display: none;
+	}
+}
+
+html {
+	padding: 0;
+	margin: 0;
+//	background-color: $gradientColorBottom;
+//	background: transparent url(../Images/stock-photo-17870918-forest.jpg) center -50px no-repeat;
+//	background-size: 3800px 2530px;
+	background: transparent url(../Images/animals.png) center center no-repeat;
+//	background-size: 100% auto;
+//	background-size: 1250px 878px;
+	background-size: cover;
+	&.oldie {
+		background: none;
+	}
+}
+.wrap {
+	width: $width;
+	padding: 20px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+}
+.outer-wrap {
+	overflow: hidden;
+}
+h1 {
+	color: $orange;
+//	color: $darkGray;
+	clear: both;
+	margin: 0 0 20px 0;
+	@extend .font-monoton;
+	font-size: 59px;
+	font-weight: normal;
+	padding: 12px 27px;
+	@include _border_radius(15px);
+//	@include _boxshadow(('0 1px 5px #444'));
+	@include _boxshadow(('0 1px 5px #333','0 1px 10px #000 inset'));
+	//	background: $mediumGray;
+//	background: #777;
+//	background: $offWhite;
+	background: $brown;
+	line-height: 1;
+	span {
+		@extend .font-geo;
+		display: block;
+		font-size: 27px;
+	}
+}
+div {
+	&.dadz {
+		position: relative;
+	}
+}
+h2 {
+	@extend .font-contrail;
+	font-size: 24px;
+	margin: 0;
+	padding: 10px 0;
+	font-weight: normal;
+}
+.content {
+	padding: 0;
+}
+p {
+	margin: 0 0 15px 0;
+}
+nav {
+	color: $offWhite;
+	&.primary {
+		@extend .clearfix;
+		> ul {
+			> li {
+//				width: 31%;
+				list-style: none;
+				@include _border_radius(10px);
+				@include _boxshadow(('0 1px 2px #000','0 1px 10px #000 inset'));
+				background: $brown;
+				border: 2px solid $green;
+				margin: 0 0 20px 0;
+//				float: left;
+				.inner {
+					margin: 10px 20px;
+				}
+				p,h2,ul {
+					margin: 0;
+					padding: 0;
+				}
+				ul {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+$rightWidth: 240px;
+.left {
+//	padding-top: 10px;
+	width: $width - $rightWidth - 20;
+	float: left;
+	p {
+		line-height: 1.4;
+		background: $orange;
+		padding: 10px;
+		@include _border_radius(3px);
+		@include _boxshadow(('0 1px 2px #000','0 1px 10px #000 inset'));
+	}
+}
+
+.right {
+	float: right;
+	width: $rightWidth;
+}
+
+.hero {
+	clear: both;
+	height: 382px;
+	margin: 0 0 20px;
+	@include _border_radius(10px);
+	background: transparent url(../Images/dadz.jpg) 0 0 no-repeat;
+	border: 2px solid $green;
+	@include _boxshadow(('0 1px 2px #000','0 1px 10px #000 inset'));
+//	@include _transition_easein_quad('300','background-position');
+}
+
+.featured-video {
+//	@include _border_radius(10px);
+//	overflow: hidden;
+//	width: 100%;
+//	height: 442px;
+	margin-bottom: 20px;
+}

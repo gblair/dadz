@@ -1,0 +1,9 @@
+# Common excluded files
+.svn
+.DS_Store
+._DS*
+._*
+.idea
+.sass-cache
+.sass-cache/*
+.ftpquota

@@ -1,0 +1,102 @@
+// Some extendable classes
+.clearfix {
+	zoom: 1;
+	&:after { /* FF, IE8, O, S, etc. */
+		content: ".";
+		display: block;
+		height: 0;
+		line-height: 0;
+		margin-bottom: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+@mixin _clearfix {
+	@extend .clearfix;
+}
+
+@mixin _border_radius($params) {
+	border-radius: $params; 
+	-moz-border-radius: $params; 
+	-webkit-border-radius: $params; 
+}
+
+// NOTE: you must use this mixin as follows (the quotes and parentheses are important):
+// @include _boxshadow(('0 1px 2px #eee'));
+// OR: @include _boxshadow(('0 1px 2px #eee','0 0 20px #fbfbfb inset'));
+// OR: @include _boxshadow(('0 1px 2px #eee','0 0 20px #fbfbfb inset','0 0 2px #ff0000 inset'));
+// etc.
+@mixin _boxshadow($paramSets) {
+	$params: 0;
+	@each $v in $paramSets {
+		@if $params != 0 {
+			$params: $params + ',' + $v;
+		}
+		@if $params == 0 {
+			$params: $v;
+		}
+	}
+	-moz-box-shadow: unquote($params);
+	-webkit-box-shadow: unquote($params);
+	box-shadow: unquote($params);
+}
+
+@mixin _textshadow($params,$color) {
+	text-shadow: $params $color;
+}
+
+@mixin _cols($colCount, $containingWidth, $padding, $spacing: 0) {
+	.cols {
+		@include _clearfix;
+		.col {
+			float: left;
+			.col-inner {
+				padding: 0 $padding;
+			}
+			padding: 0 0 $spacing 0;
+		}
+	}
+	.cols-#{$colCount} {
+		.col {
+			width: ($containingWidth - ($spacing * ($colCount - 1))) / $colCount;
+			margin-right: $spacing;
+		}
+		.col-#{$colCount} {
+			float: right;
+			margin: 0;
+		}
+		.col-#{$colCount - 1} {
+			margin: 0;
+		}
+	}
+}
+
+@mixin _transition_easein_quad($speed, $attr: 'all') {
+	-webkit-transition: #{$attr} #{$speed}ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+	   -moz-transition: #{$attr} #{$speed}ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+	    -ms-transition: #{$attr} #{$speed}ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+	     -o-transition: #{$attr} #{$speed}ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+	        transition: #{$attr} #{$speed}ms cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */
+}
+
+@mixin _opacity($degree) {
+	filter: alpha(opacity=($degree*100));
+	opacity: $degree;
+}
+
+@mixin _gradient($color1, $color2) {
+	background-image: linear-gradient(bottom, $color1 0%, $color2);
+	background-image: -o-linear-gradient(bottom, $color1 0%, $color2);
+	background-image: -moz-linear-gradient(bottom, $color1 0%, $color2);
+	background-image: -webkit-linear-gradient(bottom, $color1 0%, $color2);
+	background-image: -ms-linear-gradient(bottom, $color1 0%, $color2);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, $color1),
+		color-stop(0.66, $color2)
+	);
+}

@@ -1,0 +1,767 @@
+@charset "UTF-8";
+.clearfix, nav.primary {
+  zoom: 1; }
+  .clearfix:after, nav.primary:after {
+    /* FF, IE8, O, S, etc. */
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    margin-bottom: 0;
+    clear: both;
+    visibility: hidden; }
+
+/* HTML5 ✰ Boilerplate
+ * ==|== normalize ==========================================================
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+audio:not([controls]) {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.231; }
+
+body, button, input, select, textarea {
+  font-family: sans-serif;
+  color: #7b7b78; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover, a:active {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+small {
+  font-size: 85%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+ul, ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+form {
+  margin: 0; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+label {
+  cursor: pointer; }
+
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input {
+  line-height: normal;
+  *overflow: visible; }
+
+table button, table input {
+  *overflow: auto; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+input:invalid, textarea:invalid {
+  background-color: #f0dddd; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td {
+  vertical-align: top; }
+
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden; }
+
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%; }
+
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left; }
+
+#cboxContent {
+  position: relative; }
+
+#cboxLoadedContent {
+  overflow: auto; }
+
+#cboxTitle {
+  margin: 0; }
+
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer; }
+
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block; }
+
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0; }
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay {
+  background: url(../Images/colorbox/overlay.png) repeat 0 0; }
+
+#cboxTopLeft {
+  width: 21px;
+  height: 21px;
+  background: url(../Images/colorbox/controls.png) no-repeat -101px 0; }
+
+#cboxTopRight {
+  width: 21px;
+  height: 21px;
+  background: url(../Images/colorbox/controls.png) no-repeat -130px 0; }
+
+#cboxBottomLeft {
+  width: 21px;
+  height: 21px;
+  background: url(../Images/colorbox/controls.png) no-repeat -101px -29px; }
+
+#cboxBottomRight {
+  width: 21px;
+  height: 21px;
+  background: url(../Images/colorbox/controls.png) no-repeat -130px -29px; }
+
+#cboxMiddleLeft {
+  width: 21px;
+  background: url(../Images/colorbox/controls.png) left top repeat-y; }
+
+#cboxMiddleRight {
+  width: 21px;
+  background: url(../Images/colorbox/controls.png) right top repeat-y; }
+
+#cboxTopCenter {
+  height: 21px;
+  background: url(../Images/colorbox/border.png) 0 0 repeat-x; }
+
+#cboxBottomCenter {
+  height: 21px;
+  background: url(../Images/colorbox/border.png) 0 -29px repeat-x; }
+
+#cboxContent {
+  background: #fff;
+  overflow: hidden; }
+
+.cboxIframe {
+  background: #fff; }
+
+#cboxError {
+  padding: 50px;
+  border: 1px solid #ccc; }
+
+#cboxLoadedContent {
+  margin-bottom: 28px; }
+
+#cboxTitle {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #949494; }
+
+#cboxCurrent {
+  position: absolute;
+  bottom: 4px;
+  left: 58px;
+  color: #949494; }
+
+#cboxSlideshow {
+  position: absolute;
+  bottom: 4px;
+  right: 30px;
+  color: #0092ef; }
+
+#cboxPrevious {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(../Images/colorbox/controls.png) no-repeat -75px 0;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px; }
+
+#cboxPrevious:hover {
+  background-position: -75px -25px; }
+
+#cboxNext {
+  position: absolute;
+  bottom: 0;
+  left: 27px;
+  background: url(../Images/colorbox/controls.png) no-repeat -50px 0;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px; }
+
+#cboxNext:hover {
+  background-position: -50px -25px; }
+
+#cboxLoadingOverlay {
+  background: url(../Images/colorbox/loading_background.png) no-repeat center center; }
+
+#cboxLoadingGraphic {
+  background: url(../Images/colorbox/loading.gif) no-repeat center center; }
+
+#cboxClose {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url(../Images/colorbox/controls.png) no-repeat -25px 0;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px; }
+
+#cboxClose:hover {
+  background-position: -25px -25px; }
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); }
+
+/*
+  The following provides PNG transparency support for IE6
+  Feel free to remove this and the /ie6/ directory if you have dropped IE6 support.
+*/
+.cboxIE6 #cboxTopLeft {
+  background: url(../Images/colorbox/ie6/borderTopLeft.png); }
+
+.cboxIE6 #cboxTopCenter {
+  background: url(../Images/colorbox/ie6/borderTopCenter.png); }
+
+.cboxIE6 #cboxTopRight {
+  background: url(../Images/colorbox/ie6/borderTopRight.png); }
+
+.cboxIE6 #cboxBottomLeft {
+  background: url(../Images/colorbox/ie6/borderBottomLeft.png); }
+
+.cboxIE6 #cboxBottomCenter {
+  background: url(../Images/colorbox/ie6/borderBottomCenter.png); }
+
+.cboxIE6 #cboxBottomRight {
+  background: url(../Images/colorbox/ie6/borderBottomRight.png); }
+
+.cboxIE6 #cboxMiddleLeft {
+  background: url(../Images/colorbox/ie6/borderMiddleLeft.png); }
+
+.cboxIE6 #cboxMiddleRight {
+  background: url(../Images/colorbox/ie6/borderMiddleRight.png); }
+
+.cboxIE6 #cboxTopLeft,
+.cboxIE6 #cboxTopCenter,
+.cboxIE6 #cboxTopRight,
+.cboxIE6 #cboxBottomLeft,
+.cboxIE6 #cboxBottomCenter,
+.cboxIE6 #cboxBottomRight,
+.cboxIE6 #cboxMiddleLeft,
+.cboxIE6 #cboxMiddleRight {
+  _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')"); }
+
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.happyworm.com/jquery/jplayer
+ *
+ * Skin Name: Blue Monday
+ *
+ * Copyright (c) 2010 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Luke McDonald (lukemcdonald.com)
+ * Skin Design: Orman Clark (premiumpixels.com)
+ * Skin Version: 3.0 (jPlayer 2.0.0)
+ * Date: 20th December 2010
+ */
+div.jp-audio {
+  font-size: 1em;
+  font-family: Verdana, Arial, sans-serif;
+  color: #fff;
+  line-height: 1.6; }
+
+div.jp-audio {
+  width: 360px; }
+
+div.jp-interface {
+  position: relative;
+  width: 100%;
+  background: #3a3b3c;
+  background: url(../Images/jplayer/jplayer-black-and-yellow.png) 0 -210px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #222222), color-stop(1, #3a3b3c));
+  background: -moz-linear-gradient(center bottom, #222222 0%, #3a3b3c 100%);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+div.jp-audio div.jp-type-single div.jp-interface {
+  height: 30px; }
+
+div.jp-interface ul.jp-controls {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+div.jp-interface ul.jp-controls li {
+  display: inline; }
+
+div.jp-interface ul.jp-controls a {
+  position: absolute;
+  overflow: hidden;
+  text-indent: -9999px; }
+
+a.jp-play,
+a.jp-pause {
+  width: 33px;
+  height: 30px;
+  z-index: 1;
+  outline: none; }
+
+div.jp-audio div.jp-type-single a.jp-play,
+div.jp-audio div.jp-type-single a.jp-pause {
+  top: 0;
+  left: 0;
+  border-right: 1px solid #242526; }
+
+a.jp-play {
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") 0 0 no-repeat; }
+
+a.jp-play:hover {
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") -33px 0 no-repeat; }
+
+a.jp-pause {
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") 0 -30px no-repeat;
+  display: none; }
+
+a.jp-pause:hover {
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") -33px -30px no-repeat; }
+
+div.jp-progress-container {
+  position: absolute;
+  top: 0;
+  left: 34px;
+  width: 225px;
+  height: 6px;
+  padding: 12px 10px;
+  border-left: 1px solid #323334;
+  border-right: 1px solid #242526; }
+
+div.jp-progress {
+  position: absolute;
+  overflow: hidden; }
+
+div.jp-audio div.jp-type-single div.jp-progress {
+  width: 223px;
+  height: 7px;
+  padding: 1px;
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") 0 -192px repeat-x; }
+
+div.jp-seek-bar {
+  width: 0px;
+  height: 5px;
+  cursor: pointer;
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") 0 -163px repeat-x;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px; }
+
+div.jp-play-bar {
+  width: 0px;
+  height: 5px;
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") 0 -133px repeat-x;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px; }
+
+/* The seeking class is added/removed inside jPlayer
+div.jp-seeking-bg {
+	background: url("../Images/jplayer/pbar-ani.gif");
+}
+*/
+div.jp-volume-bar-container {
+  position: absolute;
+  top: 0;
+  left: 281px;
+  width: 40px;
+  height: 6px;
+  padding: 12px 10px;
+  border-left: 1px solid #323334; }
+
+div.jp-volume-bar {
+  position: relative;
+  overflow: hidden;
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") 0 -192px repeat-x;
+  width: 40px;
+  height: 9px;
+  cursor: pointer; }
+
+div.jp-audio div.jp-type-single div.jp-volume-bar {
+  top: 0;
+  left: 20px; }
+
+div.jp-volume-bar-value {
+  width: 0px;
+  height: 5px;
+  margin: 1px;
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") 0 -133px repeat-x;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px; }
+
+a.jp-mute,
+a.jp-unmute {
+  width: 17px;
+  height: 13px;
+  z-index: 1;
+  outline: none; }
+
+div.jp-audio div.jp-type-single a.jp-mute,
+div.jp-audio div.jp-type-single a.jp-unmute {
+  top: 9px;
+  left: 290px; }
+
+a.jp-mute {
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") -10px -68px no-repeat; }
+
+a.jp-mute:hover {
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") -43px -68px no-repeat; }
+
+a.jp-unmute {
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") -10px -98px no-repeat;
+  display: none; }
+
+a.jp-unmute:hover {
+  background: url("../Images/jplayer/jplayer-black-and-yellow.png") -43px -98px no-repeat; }
+
+div.jp-jplayer {
+  width: 0px;
+  height: 0px; }
+
+div.jp-jplayer {
+  background-color: #000000; }
+
+.font-contrail, h2 {
+  font-family: 'Contrail One', cursive; }
+
+.font-monoton, h1 {
+  font-family: 'Monoton', cursive; }
+
+.font-righteous {
+  font-family: 'Righteous', cursive; }
+
+.font-megrim {
+  font-family: 'Megrim', cursive; }
+
+.font-geo, h1 span {
+  font-family: 'Geo', sans-serif; }
+
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: orange;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.bg {
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  position: fixed;
+  width: 2500px;
+  top: 0;
+  left: 0; }
+
+.bgSimple {
+  filter: alpha(opacity=5);
+  opacity: 0.05;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 700px;
+  width: 780px;
+  line-height: 1; }
+  .bgSimple span {
+    display: block;
+    float: left;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    display: none; }
+
+html {
+  padding: 0;
+  margin: 0;
+  background: transparent url(../Images/animals.png) center center no-repeat;
+  background-size: cover; }
+  html.oldie {
+    background: none; }
+
+.wrap {
+  width: 780px;
+  padding: 20px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; }
+
+.outer-wrap {
+  overflow: hidden; }
+
+h1 {
+  color: orange;
+  clear: both;
+  margin: 0 0 20px 0;
+  font-size: 59px;
+  font-weight: normal;
+  padding: 12px 27px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-box-shadow: 0 1px 5px #333,0 1px 10px #000 inset;
+  -webkit-box-shadow: 0 1px 5px #333,0 1px 10px #000 inset;
+  box-shadow: 0 1px 5px #333,0 1px 10px #000 inset;
+  background: #443311;
+  line-height: 1; }
+  h1 span {
+    display: block;
+    font-size: 27px; }
+
+div.dadz {
+  position: relative; }
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+  padding: 10px 0;
+  font-weight: normal; }
+
+.content {
+  padding: 0; }
+
+p {
+  margin: 0 0 15px 0; }
+
+nav {
+  color: #f3f3f3; }
+  nav.primary > ul > li {
+    list-style: none;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-box-shadow: 0 1px 2px #000,0 1px 10px #000 inset;
+    -webkit-box-shadow: 0 1px 2px #000,0 1px 10px #000 inset;
+    box-shadow: 0 1px 2px #000,0 1px 10px #000 inset;
+    background: #443311;
+    border: 2px solid #447700;
+    margin: 0 0 20px 0; }
+    nav.primary > ul > li .inner {
+      margin: 10px 20px; }
+    nav.primary > ul > li p, nav.primary > ul > li h2, nav.primary > ul > li ul {
+      margin: 0;
+      padding: 0; }
+    nav.primary > ul > li ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+
+.left {
+  width: 520px;
+  float: left; }
+  .left p {
+    line-height: 1.4;
+    background: orange;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    padding: 10px; }
+
+.right {
+  float: right;
+  width: 240px; }
+
+.hero {
+  clear: both;
+  height: 382px;
+  margin: 0 0 20px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background: transparent url(../Images/dadz.jpg) 0 0 no-repeat;
+  border: 2px solid #447700;
+  -moz-box-shadow: 0 1px 2px #000,0 1px 10px #000 inset;
+  -webkit-box-shadow: 0 1px 2px #000,0 1px 10px #000 inset;
+  box-shadow: 0 1px 2px #000,0 1px 10px #000 inset; }
+
+.featured-video {
+  margin-bottom: 20px; }

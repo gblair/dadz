@@ -1,0 +1,10 @@
+php_value error_reporting integer
+
+RewriteEngine On
+
+######
+# FORCE removal of 'www':
+######
+# RewriteRule .? http://eaglekin.com/ [R=302,L]
+# RewriteCond %{HTTP_HOST} !^dadz\.fm$ [NC]
+# RewriteRule .? http://dadz.fm%{REQUEST_URI} [R=301,L]
