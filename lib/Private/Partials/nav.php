@@ -28,12 +28,9 @@
 		</li>
 		<li>
 			<div class="inner">
-				<h2>Upcoming Shows</h2>
-				<ul>
-					<li>Sept 28 @ Firkin Tavern</li>
-				</ul><br />
 				<h2>Recent Shows</h2>
 				<ul>
+					<li>Sept 28 @ Firkin Tavern</li>
 					<li>Aug 3 @ Firkin Tavern</li>
 					<li>April 6 @ <a href="http://www.boombappdx.com/?page/24133/about">Boom Bap</a></li>
 					<li>May 16 @ Plan B</li>
