@@ -1,4 +1,6 @@
-<?php include('lib/Private/Partials/head.php'); ?>
+<?php 
+error_reporting(E_ALL & ~(E_STRICT | E_NOTICE | E_DEPRECATED));
+include('lib/Private/Partials/head.php'); ?>
 <body>
 	<div class="outer-wrap">
 		<div class="wrap">
